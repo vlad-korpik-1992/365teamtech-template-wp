@@ -22,10 +22,10 @@
 					</a>
 					<ul class="menu__list">
 						<li class="menu__list__items">
-							<a class="menu__list__link" href="#">Home</a>
+							<a class="menu__list__link" href="/">Home</a>
 						</li>
 						<li class="menu__list__items">
-							<a class="menu__list__link" href="#">Our services</a>
+							<a class="menu__list__link" href="<?php echo get_page_link(15)?>">Our services</a>
 						</li>
 						<li class="menu__list__items">
 							<a class="menu__list__link" href="#" onclick="openDropMenu(event)">FAQ</a>
@@ -35,7 +35,7 @@
 							</div>
 						</li>
 						<li class="menu__list__items">
-							<a class="menu__list__link" href="#">About</a>
+							<a class="menu__list__link" href="<?php echo get_page_link(10)?>">About</a>
 						</li>
 						<li class="menu__list__items">
 							<a class="menu__list__link" href="#">Contact</a>

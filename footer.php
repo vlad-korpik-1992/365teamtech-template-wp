@@ -4,16 +4,13 @@
 			<nav class="footer__menu">
 				<ul class="footer__menu__list">
 					<li class="footer__menu__list__items">
-						<a href="#" class="footer__menu__link">Home</a>
+						<a href="/" class="footer__menu__link">Home</a>
 					</li>
 					<li class="footer__menu__list__items">
-						<a href="#" class="footer__menu__link">Our services</a>
+						<a href="<?php echo get_page_link(15)?>" class="footer__menu__link">Our services</a>
 					</li>
 					<li class="footer__menu__list__items">
-						<a href="#" class="footer__menu__link">FAQ</a>
-					</li>
-					<li class="footer__menu__list__items">
-						<a href="#" class="footer__menu__link">About</a>
+						<a href="<?php echo get_page_link(10)?>" class="footer__menu__link">About</a>
 					</li>
 					<li class="footer__menu__list__items">
 						<a href="#" class="footer__menu__link">Contact</a>

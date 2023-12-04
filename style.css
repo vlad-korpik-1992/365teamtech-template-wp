@@ -835,6 +835,10 @@ section{
     .blog__box__link:hover h2{
         text-decoration: underline;
     }
+	.services__link:hover {
+		background-color: rgb(0, 0, 0);
+		color: rgb(255, 255, 255);
+	}
 }
 @media (min-width: 991px) {
     .drop__menu{
