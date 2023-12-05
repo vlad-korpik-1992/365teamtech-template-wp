@@ -6,6 +6,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.ico">
 	<title><?php wp_title("", true); ?></title>
 </head>
 
@@ -30,8 +32,8 @@
 						<li class="menu__list__items">
 							<a class="menu__list__link" href="#" onclick="openDropMenu(event)">FAQ</a>
 							<div class="drop__menu">
-								<a href="#" class="menu__list__link menu__list__link--minw">Smart Switches FAQ</a>
-								<a href="#" class="menu__list__link menu__list__link--minw">Smart Shades / Motorized Blinds FAQ</a>
+								<a href="<?php echo get_page_link(21)?>" class="menu__list__link menu__list__link--minw">Smart Switches FAQ</a>
+								<a href="<?php echo get_page_link(25)?>" class="menu__list__link menu__list__link--minw">Smart Shades / Motorized Blinds FAQ</a>
 							</div>
 						</li>
 						<li class="menu__list__items">
