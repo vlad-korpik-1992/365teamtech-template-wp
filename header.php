@@ -40,10 +40,10 @@
 							<a class="menu__list__link" href="<?php echo get_page_link(10)?>">About</a>
 						</li>
 						<li class="menu__list__items">
-							<a class="menu__list__link" href="#">Contact</a>
+							<a class="menu__list__link" href="<?php echo get_page_link(36)?>">Contact</a>
 						</li>
 						<li class="menu__list__items">
-							<a class="menu__list__link" href="#">Blog</a>
+							<a class="menu__list__link" href="<?php echo get_page_link(42)?>">Blog</a>
 						</li>
 					</ul>
 				</nav>

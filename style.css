@@ -373,9 +373,13 @@ section{
     flex-direction: column;
     gap: 30px;
 }
+.gallery__box__link{
+    overflow: hidden;
+}
 .gallery__box__img{
     width: 100%;
     border-radius: 40px;
+    transition: 0.3s all;
 }
 .gallery__box__items__inner{
     display: grid;
@@ -748,6 +752,7 @@ section{
 }
 .blog__img{
     border-radius: 40px;
+    transition: 0.3s all;
 }
 .blog__box__link h2{
     display: flex;
@@ -767,7 +772,7 @@ section{
     font-size: clamp(1rem, 0.6727rem + 0.9091vw, 1.5rem);
     line-height: 150%;
 }
-.single__box h2{
+.single__box h2, .single__box h4, .single__box h5{
     color: #000;
     font-size: clamp(1.5rem, 0.5182rem + 2.7273vw, 3rem);
     font-weight: 700;
@@ -782,6 +787,10 @@ section{
 .single__box p{
     padding-bottom: 12px;
 }
+.single__box a{
+    text-decoration: underline;
+    color: #000;
+}
 .single__box ul{
     padding-left: 22px;
     padding: 20px 0 20px 22px;
@@ -789,6 +798,16 @@ section{
 .single__box ul li{
     list-style: disc;
     padding-bottom: 12px;
+}
+.form--error{
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 150%;
+    margin-top: 15px;
+    color: #008000;
+}
+.form--error--warning{
+    color: #ff0000;
 }
 @media (min-width: 1500px){
     .hero__box__link--two{
@@ -840,6 +859,12 @@ section{
 		background-color: rgb(0, 0, 0);
 		color: rgb(255, 255, 255);
 	}
+    .blog__box__link:hover .blog__img{
+        transform: scale(0.95);
+    }
+    .gallery__box__link:hover .gallery__box__img{
+        transform: scale(1.1);
+    }
 }
 @media (min-width: 991px) {
     .drop__menu{
@@ -963,6 +988,9 @@ section{
     }
     .blog__box__link h2{
         padding-bottom: 0;
+    }
+    .company__img--single{
+        height: auto;
     }
 }
 @media (max-width: 767px){

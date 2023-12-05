@@ -1,40 +1,27 @@
-<?php
-/**
- * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package teamtech
- */
-
-get_header();
-?>
-
-	<main id="primary" class="site-main">
-
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'teamtech' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'teamtech' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-	</main><!-- #main -->
-
-<?php
-get_sidebar();
-get_footer();
+<?php get_header(); ?>
+<section class="headline">
+	<div class="wrapper">
+		<a class="headline__link" href="<?php echo get_page_link(42) ?>">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+				<path d="M5 12L11 6M5 12L11 18M5 12H19" stroke="#A4A4A4" stroke-opacity="0.643137" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+			<p>Back</p>
+		</a>
+	</div>
+</section>
+<section class="service">
+	<div class="wrapper wrapper--service">
+		<h1><?php single_post_title(); ?></h1>
+	</div>
+</section>
+<section class="company">
+	<img class="company__img company__img--single" lazy="loading" src="<? the_post_thumbnail_url() ?>" alt="<?php single_post_title(); ?>">
+</section>
+<section class="single">
+	<div class="wrapper wrapper--service">
+		<div class="single__box">
+			<?php echo wpautop(the_content());?>
+		</div>
+	</div>
+</section>
+<?php get_footer(); ?>

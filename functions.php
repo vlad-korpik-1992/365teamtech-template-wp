@@ -146,9 +146,35 @@ add_theme_support('post-thumbnails', array('post'));
  
 function teamtech_scripts() {
 	wp_enqueue_style( 'teamtech-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_deregister_script('jquery');
 	wp_register_script('main-script', get_template_directory_uri() . '/assets/js/main.js', array(), null, true);
 
 	wp_enqueue_script('main-script');
+
+	if ( is_page_template('page-contacts.php')) {
+
+		wp_register_script('main-form-script', get_template_directory_uri() . '/assets/js/main-form.js', array(), null, true);
+
+		wp_enqueue_script('main-form-script');
+	}
+
+	if ( is_page_template('page-home.php')){
+
+		wp_register_script( 'jquery-script', get_template_directory_uri() . '/assets/js/jquery-3.7.1.min.js', array(), null, true );
+
+        wp_enqueue_script( 'jquery-script' );
+
+		wp_enqueue_style( 'magnific-style', get_template_directory_uri() . '/assets/css/magnific-popup.css', array());
+
+        wp_register_script( 'magnific-script', get_template_directory_uri() . '/assets/js/jquery.magnific-popup.min.js', array(), null, true );
+
+        wp_enqueue_script( 'magnific-script' );
+
+		wp_register_script( 'magnific-main-script', get_template_directory_uri() . '/assets/js/main-magnific.js', array(), null, true );
+
+        wp_enqueue_script( 'magnific-main-script' );
+
+    }
 }
 add_action( 'wp_enqueue_scripts', 'teamtech_scripts' );
 

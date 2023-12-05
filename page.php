@@ -1,38 +1,17 @@
-<?php
-/**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package teamtech
- */
-
-get_header();
-?>
-
-	<main id="primary" class="site-main">
-
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', 'page' );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-	</main><!-- #main -->
-
-<?php
-get_sidebar();
-get_footer();
+<?php get_header(); ?>
+<section class="headline">
+    <div class="wrapper wrapper--service">
+        <h1><?php single_post_title(); ?></h1>
+    </div>
+</section>
+<section class="company">
+	<img class="company__img company__img--single" lazy="loading" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>" alt="<?php single_post_title(); ?>">
+</section>
+<section class="single">
+	<div class="wrapper wrapper--service">
+		<div class="single__box">
+			<?php echo wpautop(the_content());?>
+		</div>
+	</div>
+</section>
+<?php get_footer(); ?>

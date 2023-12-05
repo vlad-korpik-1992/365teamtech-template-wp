@@ -13,10 +13,10 @@
 						<a href="<?php echo get_page_link(10)?>" class="footer__menu__link">About</a>
 					</li>
 					<li class="footer__menu__list__items">
-						<a href="#" class="footer__menu__link">Contact</a>
+						<a href="<?php echo get_page_link(36)?>" class="footer__menu__link">Contact</a>
 					</li>
 					<li class="footer__menu__list__items">
-						<a href="#" class="footer__menu__link">Blog</a>
+						<a href="<?php echo get_page_link(42)?>" class="footer__menu__link">Blog</a>
 					</li>
 				</ul>
 			</nav>
